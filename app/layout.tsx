@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Great_Vibes, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -24,6 +24,13 @@ const vibes = Great_Vibes({
   variable: "--font-vibes",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#120f0d",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
