@@ -39,7 +39,8 @@ export function Header() {
         <nav className="nav-desktop" aria-label="Primary">
           {nav.map((item) => {
             const current = pathname.replace(/\/$/, "") || "/";
-            const active = item.href !== "#contact" && current === item.href;
+            const active =
+              !item.href.includes("#") && current === item.href;
             return (
               <Link
                 key={item.href}

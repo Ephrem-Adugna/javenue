@@ -2,42 +2,10 @@ import { BrandName } from "@/components/BrandName";
 import { ButtonLink } from "@/components/ButtonLink";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { Reveal } from "@/components/Reveal";
+import { extraGroups, venueRental } from "@/lib/pricing";
 import { asset } from "@/lib/paths";
 import { featuredHomeImages } from "@/lib/gallery";
 import { site } from "@/lib/site";
-
-const occasions = [
-  {
-    title: "Weddings",
-    copy: "Receptions and celebrations styled with draping, florals, and warm light.",
-    image: "/images/wedding.jpg",
-    alt: "Outdoor wedding cocktail hour with gold chairs, white linens, orchids, and draped fabric",
-  },
-  {
-    title: "Showers",
-    copy: "Baby showers, bridal showers, and welcome gatherings with a photo-ready entrance.",
-    image: "/images/shower.jpg",
-    alt: "Pink balloon arch at a baby shower entrance",
-  },
-  {
-    title: "Birthdays",
-    copy: "From quiet evenings to fully themed parties, the room can take on your color story.",
-    image: "/images/birthday.jpg",
-    alt: "Birthday lightbox under purple lighting",
-  },
-  {
-    title: "Celebrations",
-    copy: "Holidays, milestones, and gatherings that need a space as joyful as the occasion.",
-    image: "/images/july.jpg",
-    alt: "Red, white, and navy styled dessert table",
-  },
-  {
-    title: "Gatherings",
-    copy: "A flexible room for private parties, community events, and everything in between.",
-    image: "/images/room.jpg",
-    alt: "The open J.A. Venue room with marble floors and white walls",
-  },
-];
 
 const reasons = [
   {
@@ -112,23 +80,79 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="occasions">
+      <section className="rates" id="rates">
         <div className="container section-head">
           <Reveal>
-            <p className="eyebrow">Occasions</p>
-            <h2>Styled for the moment you are marking.</h2>
+            <p className="eyebrow">Rates & options</p>
+            <h2>Call to plan the room. Add what you need.</h2>
+            <p className="lede rates-lede">
+              Open {site.hours}. Hourly and daily rental. Venue pricing is quoted by
+              phone so we can match the day, the hours, and how you want it
+              styled.
+            </p>
           </Reveal>
         </div>
-        <div className="container-wide occasion-list">
-          {occasions.map((item) => (
-            <article key={item.title} className="occasion">
-              <img src={asset(item.image)} alt={item.alt} />
-              <div className="occasion-copy">
-                <h3>{item.title}</h3>
-                <p>{item.copy}</p>
+
+        <div className="container rates-venue">
+          <div className="rates-venue-copy">
+            <p className="eyebrow">Venue rental</p>
+            <h3>
+              <BrandName />
+            </h3>
+            <dl className="rates-when">
+              <div>
+                <dt>{venueRental.weekday.label}</dt>
+                <dd>{venueRental.weekday.days}</dd>
               </div>
-            </article>
-          ))}
+              <div>
+                <dt>{venueRental.weekend.label}</dt>
+                <dd>{venueRental.weekend.days}</dd>
+              </div>
+            </dl>
+            <p className="rates-note">{venueRental.availability}</p>
+            <ButtonLink href={site.phoneHref}>Call for pricing</ButtonLink>
+          </div>
+          <div className="rates-venue-details">
+            <p className="rates-label">Rental includes</p>
+            <ul className="rates-includes">
+              {venueRental.includes.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="rates-label">To book</p>
+            <ul className="rates-notes">
+              {venueRental.notes.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="rates-special">{venueRental.special}</p>
+          </div>
+        </div>
+
+        <div className="container extras">
+          <Reveal>
+            <p className="eyebrow">Add-ons</p>
+            <h3 className="extras-title">For your convenience we have</h3>
+            <p className="lede extras-lede">
+              Dress the tables, the chairs, and the room. Items without a listed
+              price are quoted when you call.
+            </p>
+          </Reveal>
+          <div className="extras-grid">
+            {extraGroups.map((group) => (
+              <article key={group.title} className="extras-card">
+                <h4>{group.title}</h4>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={item.name}>
+                      <span>{item.name}</span>
+                      <span>{item.price ?? "Inquire"}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

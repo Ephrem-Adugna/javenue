@@ -20,6 +20,7 @@ export const site = {
     url: "https://www.instagram.com/j.a.venue_joiousaffairs/",
   },
   facebookLabel: "J.A. Venue",
+  hours: "8:00 AM – 12:00 AM",
   ownership: ["Family Owned", "Women Owned", "Black Owned"],
   services: [
     "Event Venue",
@@ -32,6 +33,7 @@ export const site = {
 export const nav = [
   { href: "/", label: "Home" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/#rates", label: "Rates" },
   { href: "/about", label: "About Us" },
   { href: "#contact", label: "Contact" },
 ] as const;

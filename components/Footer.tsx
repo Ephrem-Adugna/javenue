@@ -50,6 +50,7 @@ export function Footer() {
             <p className="footer-heading">Explore</p>
             <Link href="/">Home</Link>
             <Link href="/gallery">Gallery</Link>
+            <Link href="/#rates">Rates</Link>
             <Link href="/about">About Us</Link>
             <a href="#contact">Contact</a>
           </div>
@@ -59,6 +60,7 @@ export function Footer() {
             <p>
               {site.address.city}, {site.address.state} {site.address.zip}
             </p>
+            <p>Open {site.hours}</p>
             <a href={site.phoneHref}>{site.phone}</a>
             <a href={`mailto:${site.email}`}>{site.email}</a>
           </div>
