@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Great_Vibes, Outfit } from "next/font/google";
+import { Cormorant_Garamond, Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/lib/site";
@@ -18,11 +19,12 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const vibes = Great_Vibes({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-vibes",
+const helloBella = localFont({
+  src: "./fonts/HelloBella.woff",
+  variable: "--font-hello-bella",
   display: "swap",
+  fallback: ["cursive"],
+  adjustFontFallback: "Times New Roman",
 });
 
 export const viewport: Viewport = {
@@ -81,7 +83,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${outfit.variable} ${cormorant.variable} ${vibes.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${outfit.variable} ${cormorant.variable} ${helloBella.variable}`}>
       <body>
         <script
           type="application/ld+json"

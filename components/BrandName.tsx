@@ -16,7 +16,7 @@ export function BrandName({
         J.A.
       </span>
       <span className="brand-word" aria-hidden="true">
-        venue
+        Venue
       </span>
     </Comp>
   );

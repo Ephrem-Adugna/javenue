@@ -95,7 +95,6 @@ export default function HomePage() {
 
         <div className="container rates-venue">
           <div className="rates-venue-copy">
-            <p className="eyebrow">Venue rental</p>
             <h3>
               <BrandName />
             </h3>
@@ -205,8 +204,8 @@ export default function HomePage() {
 
       <section className="finale">
         <img
-          src={asset("/images/birthday.jpg")}
-          alt="Birthday celebration lighting at J.A. Venue"
+          src={asset("/images/wedding.jpg")}
+          alt="Outdoor wedding cocktail hour with gold chairs, white linens, orchids, and draped fabric"
         />
         <div className="finale-inner">
           <p className="eyebrow">Your occasion</p>

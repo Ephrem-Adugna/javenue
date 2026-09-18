@@ -14,11 +14,11 @@
   --blush: #e7cfc4;
   --line: rgba(182, 138, 76, 0.38);
   --shadow: 0 24px 60px rgba(18, 15, 13, 0.22);
-  --header: 4.75rem;
+  --header: 5.35rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --font-serif: var(--font-cormorant), "Times New Roman", serif;
   --font-sans: var(--font-outfit), "Segoe UI", sans-serif;
-  --font-script: var(--font-vibes), "Palatino", serif;
+  --font-script: var(--font-hello-bella), "Palatino", cursive;
 }
 
 *,
@@ -159,6 +159,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  overflow: visible;
 }
 
 .brand {
@@ -169,72 +170,80 @@ p {
 
 .brand-name {
   display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 0.78;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.18em;
+  line-height: 1;
   vertical-align: middle;
+  overflow: visible;
+  padding: 0.28em 0.12em 0.38em 0.04em;
 }
 
 .lede .brand-name,
 p .brand-name {
-  margin-right: 0.28em;
-  transform: translateY(0.18em);
+  margin-right: 0.12em;
+}
+
+.lede:has(.brand-name.is-inline) {
+  line-height: 2.05;
+}
+
+h2 + .lede:has(.brand-name.is-inline) {
+  padding-top: 0.45rem;
 }
 
 .brand-name.is-inline {
-  flex-direction: row;
+  display: inline-flex;
   align-items: baseline;
-  gap: 0.25em;
   transform: none;
-  margin-right: 0.15em;
-}
-
-.brand-name.is-inline .brand-script {
-  font-size: 1.55em;
+  margin: 0 0.12em 0 0;
+  padding: 0;
+  gap: 0.08em;
+  font-size: 1em;
   line-height: 1;
+  vertical-align: -0.14em;
+  overflow: visible;
 }
 
+.brand-name.is-inline .brand-script,
 .brand-name.is-inline .brand-word {
-  font-size: 1.2em;
-  margin-top: 0;
+  font-size: 1em;
   line-height: 1;
 }
 
-.brand-script {
+.brand-script,
+.brand-word {
   font-family: var(--font-script);
-  font-size: 1.85rem;
+  font-size: 2.05rem;
   font-weight: 400;
   color: var(--lilac);
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .brand-word {
-  font-family: var(--font-script);
-  font-size: 1.05rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
   text-transform: none;
-  color: var(--ivory);
-  margin-top: -0.08em;
 }
 
+.intro .brand-script,
 .intro .brand-word,
+.why .brand-script,
 .why .brand-word,
+.offer-card .brand-script,
 .offer-card .brand-word {
-  color: var(--ink);
+  color: var(--lilac-deep);
 }
 
 .site-header .brand-name,
 .footer-brand .brand-name {
-  align-items: flex-start;
+  padding: 0.42em 0.16em 0.48em 0.08em;
 }
 
-.site-header .brand-script {
-  font-size: 1.7rem;
-}
-
-.site-header .brand-word {
-  font-size: 0.95rem;
+.site-header .brand-script,
+.site-header .brand-word,
+.footer-brand .brand-script,
+.footer-brand .brand-word {
+  font-size: 1.85rem;
 }
 
 .nav-desktop {
@@ -558,17 +567,10 @@ p .brand-name {
   margin: 0 0 1.25rem;
 }
 
-.rates-venue .brand-name {
-  align-items: flex-start;
-}
-
-.rates-venue .brand-script {
-  font-size: clamp(2.4rem, 7vw, 3.6rem);
-}
-
+.rates-venue .brand-script,
 .rates-venue .brand-word {
-  font-size: clamp(1.3rem, 3.5vw, 1.9rem);
-  color: var(--ivory);
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  color: var(--lilac);
 }
 
 .rates-when {
@@ -710,16 +712,9 @@ p .brand-name {
   margin-bottom: 0;
 }
 
-.why-title .brand-name {
-  align-items: flex-start;
-}
-
-.why-title .brand-script {
-  font-size: clamp(2.6rem, 7vw, 4rem);
-}
-
+.why-title .brand-script,
 .why-title .brand-word {
-  font-size: clamp(1.45rem, 3.6vw, 2.15rem);
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
 }
 
 .why-grid {
@@ -1102,7 +1097,14 @@ p .brand-name {
 
 @media (max-width: 699px) {
   :root {
-    --header: 4.25rem;
+    --header: 4.6rem;
+  }
+
+  .site-header .brand-script,
+  .site-header .brand-word,
+  .footer-brand .brand-script,
+  .footer-brand .brand-word {
+    font-size: 1.55rem;
   }
 
   .container {
