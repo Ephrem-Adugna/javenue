@@ -20,6 +20,14 @@ export const categoryLabels: { id: "all" | GalleryCategory; label: string }[] = 
 
 export const galleryImages: GalleryImage[] = [
   {
+    src: "/images/storefront.jpg",
+    alt: "The black storefront of J.A. Venue with white curtains and the painted J.A. venue sign",
+    width: 1024,
+    height: 540,
+    category: "venue",
+    span: "wide",
+  },
+  {
     src: "/images/room.jpg",
     alt: "The empty J.A. Venue room with marble floors, white walls, and a chandelier",
     width: 1024,
@@ -33,6 +41,14 @@ export const galleryImages: GalleryImage[] = [
     width: 798,
     height: 996,
     category: "venue",
+    span: "tall",
+  },
+  {
+    src: "/images/wedding.jpg",
+    alt: "Outdoor wedding cocktail hour with gold chairs, white linens, orchids, and draped fabric",
+    width: 824,
+    height: 1024,
+    category: "celebrations",
     span: "tall",
   },
   {
@@ -109,7 +125,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/images/drinks.jpg",
-    alt: "Styled drinks graphic from Joious Affairs celebrating party hosting",
+    alt: "Styled drinks at a celebration hosted at J.A. Venue",
     width: 756,
     height: 990,
     category: "celebrations",
@@ -118,10 +134,10 @@ export const galleryImages: GalleryImage[] = [
 ];
 
 export const featuredHomeImages = [
-  galleryImages[0], // room
-  galleryImages[3], // july
-  galleryImages[5], // organic
-  galleryImages[6], // spiderman
-  galleryImages[7], // linens
-  galleryImages[8], // palms
+  galleryImages[0], // storefront
+  galleryImages[1], // room
+  galleryImages[3], // wedding
+  galleryImages[7], // organic
+  galleryImages[8], // spiderman
+  galleryImages[9], // linens
 ];

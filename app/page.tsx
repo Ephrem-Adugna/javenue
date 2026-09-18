@@ -1,3 +1,4 @@
+import { BrandName } from "@/components/BrandName";
 import { ButtonLink } from "@/components/ButtonLink";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { Reveal } from "@/components/Reveal";
@@ -9,8 +10,8 @@ const occasions = [
   {
     title: "Weddings",
     copy: "Receptions and celebrations styled with draping, florals, and warm light.",
-    image: "/images/organic.jpg",
-    alt: "Organic balloon column in sage, yellow, cream, and gold",
+    image: "/images/wedding.jpg",
+    alt: "Outdoor wedding cocktail hour with gold chairs, white linens, orchids, and draped fabric",
   },
   {
     title: "Showers",
@@ -65,13 +66,13 @@ export default function HomePage() {
   return (
     <main id="main">
       <section className="hero" aria-label="J.A. Venue">
+        <img
+          src={asset("/images/storefront.jpg")}
+          alt="The black storefront of J.A. Venue with white curtains and the painted J.A. venue sign"
+        />
         <div className="hero-copy">
-          <p className="hero-kicker">{site.parent}</p>
-          <h1>Where celebrations take shape.</h1>
-          <p className="lede">
-            An event venue and rental studio in Los Angeles — ready to be styled
-            for weddings, showers, birthdays, and gatherings of every kind.
-          </p>
+          <h1 className="sr-only">J.A. Venue</h1>
+          <p className="lede">{site.tagline}</p>
           <div className="hero-actions">
             <ButtonLink href="/gallery">View Our Gallery</ButtonLink>
             <ButtonLink href="/about" variant="ghost">
@@ -96,9 +97,9 @@ export default function HomePage() {
               <p className="eyebrow">The Venue</p>
               <h2>A warm room for the days you want to remember.</h2>
               <p className="lede">
-                J.A. Venue is the event space of Joious Affairs Rentals. Come for
+                <BrandName inline /> is a celebration space in Los Angeles. Come for
                 the room. Stay for the way it can be dressed — linens, balloons,
-                backdrops, and the kind of color that makes a celebration feel
+                backdrops, and the kind of color that makes a gathering feel
                 complete.
               </p>
               <div className="ownership">
@@ -156,8 +157,13 @@ export default function HomePage() {
       <section className="section why">
         <div className="container">
           <Reveal>
-            <p className="eyebrow">Why J.A. Venue</p>
-            <h2>Beautiful, flexible, and ready for your color story.</h2>
+            <p className="eyebrow">Why</p>
+            <h2 className="why-title">
+              <BrandName />
+            </h2>
+            <p className="lede" style={{ marginTop: "0.85rem" }}>
+              Beautiful, flexible, and ready for your color story.
+            </p>
           </Reveal>
           <div className="why-grid">
             {reasons.map((item) => (

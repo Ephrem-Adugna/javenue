@@ -44,7 +44,6 @@ export function Footer() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <Logo href="/" />
-            <p>{site.parent}</p>
             <p className="footer-tag">{site.tagline}</p>
           </div>
           <div>
@@ -73,7 +72,7 @@ export function Footer() {
         </div>
         <div className="container footer-bottom">
           <p>
-            © {new Date().getFullYear()} {site.name} · {site.parent}
+            © {new Date().getFullYear()} {site.name}
           </p>
           <p>{site.ownership.join(" · ")}</p>
         </div>

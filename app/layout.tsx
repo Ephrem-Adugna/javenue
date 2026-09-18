@@ -41,7 +41,6 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "J.A. Venue",
-    "Joious Affairs Rentals",
     "Los Angeles event venue",
     "party rentals Los Angeles",
     "event space Manchester Avenue",
@@ -51,13 +50,13 @@ export const metadata: Metadata = {
     description: site.description,
     type: "website",
     locale: "en_US",
-    images: [`${site.url}/images/organic.jpg`],
+    images: [`${site.url}/images/storefront.jpg`],
   },
   twitter: {
     card: "summary_large_image",
     title: "J.A. Venue",
     description: site.description,
-    images: [`${site.url}/images/organic.jpg`],
+    images: [`${site.url}/images/storefront.jpg`],
   },
 };
 
@@ -65,11 +64,10 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "EventVenue",
   name: site.name,
-  alternateName: site.parent,
   description: site.description,
   telephone: site.phoneHref.replace("tel:", ""),
   email: site.email,
-  image: `${site.url}/images/room.jpg`,
+  image: `${site.url}/images/storefront.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.street,

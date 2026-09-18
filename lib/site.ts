@@ -1,10 +1,9 @@
 export const site = {
   name: "J.A. Venue",
-  parent: "Joious Affairs Rentals",
   shortName: "J.A.",
   tagline: "A beautiful setting for life’s most memorable celebrations.",
   description:
-    "J.A. Venue is an event space and rental studio in Los Angeles, part of Joious Affairs Rentals. Host weddings, showers, birthdays, and gatherings of every kind.",
+    "A beautiful setting for life’s most memorable celebrations. J.A. Venue is an event space in Los Angeles for weddings, showers, birthdays, and gatherings of every kind.",
   url: "https://ephrem-adugna.github.io/javenue",
   address: {
     street: "2070 W. Manchester Ave.",
@@ -20,7 +19,7 @@ export const site = {
     handle: "@j.a.venue_joiousaffairs",
     url: "https://www.instagram.com/j.a.venue_joiousaffairs/",
   },
-  facebookLabel: "Joious Affairs",
+  facebookLabel: "J.A. Venue",
   ownership: ["Family Owned", "Women Owned", "Black Owned"],
   services: [
     "Event Venue",

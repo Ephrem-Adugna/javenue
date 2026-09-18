@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BrandName } from "@/components/BrandName";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/lib/site";
@@ -7,7 +8,7 @@ import { asset } from "@/lib/paths";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "J.A. Venue is the Los Angeles event space of Joious Affairs Rentals — family-owned, women-owned, and Black-owned.",
+    "J.A. Venue is a family-owned, women-owned, and Black-owned event space in Los Angeles.",
 };
 
 const offerings = [
@@ -34,11 +35,11 @@ export default function AboutPage() {
     <main id="main">
       <section className="page-intro">
         <img
-          src={asset("/images/venue.jpg")}
-          alt="Interior of J.A. Venue with tables, chairs, and marble flooring"
+          src={asset("/images/storefront.jpg")}
+          alt="The storefront of J.A. Venue on West Manchester Avenue"
         />
         <div className="container page-intro-copy">
-          <p className="eyebrow">{site.parent}</p>
+          <p className="eyebrow">Our story</p>
           <h1>About Us</h1>
         </div>
       </section>
@@ -54,12 +55,12 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <p className="eyebrow">Our story</p>
+            <p className="eyebrow">Los Angeles</p>
             <h2>A family-owned studio for gatherings that matter.</h2>
             <p className="lede">
-              J.A. Venue is the event space of Joious Affairs Rentals — a
-              family-owned, women-owned, and Black-owned celebration studio in
-              Los Angeles. We host the day, and we help dress it.
+              <BrandName inline /> is a family-owned, women-owned, and Black-owned
+              celebration studio in Los Angeles. We host the day, and we help
+              dress it.
             </p>
             <p className="lede" style={{ marginTop: "1rem" }}>
               The work is personal: a room people can fill with their people, and
@@ -104,7 +105,7 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <p className="eyebrow">Los Angeles</p>
+            <p className="eyebrow">Visit</p>
             <h2>Find us on West Manchester.</h2>
             <p className="lede">
               {site.address.line}. Reach us by phone or email when you are ready

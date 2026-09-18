@@ -1,6 +1,6 @@
 # J.A. Venue
 
-Website for J.A. Venue / Joious Affairs Rentals, an event space in Los Angeles.
+Website for J.A. Venue, an event space in Los Angeles.
 
 ## Local development
 

@@ -6,7 +6,7 @@ import { asset } from "@/lib/paths";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Photographs of J.A. Venue in Los Angeles — the room, the décor, and celebrations styled by Joious Affairs Rentals.",
+    "Photographs of J.A. Venue in Los Angeles — the room, the décor, and the celebrations that fill it.",
 };
 
 export default function GalleryPage() {
@@ -14,8 +14,8 @@ export default function GalleryPage() {
     <main id="main">
       <section className="page-intro">
         <img
-          src={asset("/images/organic.jpg")}
-          alt="Organic balloon installation in sage, yellow, cream, and red"
+          src={asset("/images/storefront.jpg")}
+          alt="The storefront of J.A. Venue on West Manchester Avenue"
         />
         <div className="container page-intro-copy">
           <p className="eyebrow">Photography</p>
