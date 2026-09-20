@@ -16,17 +16,12 @@ const reasons = [
   {
     n: "02",
     title: "Styled for the moment",
-    copy: "Balloons, linens, backdrops, and décor that help the room feel finished — not empty.",
+    copy: "Balloons, linens, backdrops and decor that makes your event personal.",
   },
   {
     n: "03",
-    title: "Celebrations of every kind",
-    copy: "Weddings, showers, birthdays, repasses, and private parties all find a home here.",
-  },
-  {
-    n: "04",
     title: "A personal welcome",
-    copy: "Family-owned and locally rooted in Los Angeles, with people who care how your day feels.",
+    copy: "Family owned and locally rooted in Los Angeles with people who are dedicated to removing the stress and ensuring the success of your event.",
   },
 ];
 
@@ -63,12 +58,13 @@ export default function HomePage() {
           <Reveal delay={120}>
             <div className="intro-copy">
               <p className="eyebrow">The Venue</p>
-              <h2>A warm room for the days you want to remember.</h2>
+              <h2>Celebrations &amp; Collaborations</h2>
               <p className="lede">
-                <BrandName inline /> is a celebration space in Los Angeles. Come for
-                the room. Stay for the way it can be dressed — linens, balloons,
-                backdrops, and the kind of color that makes a gathering feel
-                complete.
+                <BrandName inline /> is a modern and beautiful space in Los
+                Angeles. Photo-perfect and ready to go for showers, receptions,
+                intimate weddings, creative workshops, community projects,
+                nonprofit activities, meetings, repasses, vendor events and so
+                much more!
               </p>
               <div className="ownership">
                 {site.ownership.map((item) => (
@@ -83,12 +79,11 @@ export default function HomePage() {
       <section className="rates" id="rates">
         <div className="container section-head">
           <Reveal>
-            <p className="eyebrow">Rates & options</p>
-            <h2>Call to plan the room. Add what you need.</h2>
+            <p className="eyebrow">Rates</p>
+            <h2>Call to plan your event</h2>
             <p className="lede rates-lede">
-              Open {site.hours}. Hourly and daily rental. Venue pricing is quoted by
-              phone so we can match the day, the hours, and how you want it
-              styled.
+              Venue hours 8:00AM – 12:00AM. Hourly and daily rentals. Call or
+              text for pricing and availability.
             </p>
           </Reveal>
         </div>
@@ -131,10 +126,10 @@ export default function HomePage() {
         <div className="container extras">
           <Reveal>
             <p className="eyebrow">Add-ons</p>
-            <h3 className="extras-title">For your convenience we have</h3>
+            <h3 className="extras-title">Walk In ready</h3>
             <p className="lede extras-lede">
-              Dress the tables, the chairs, and the room. Items without a listed
-              price are quoted when you call.
+              Draping, props, window decals, dessert stands, backdrops, balloons,
+              personalized centerpieces, themed decorations and so much more!
             </p>
           </Reveal>
           <div className="extras-grid">
@@ -158,11 +153,10 @@ export default function HomePage() {
       <section className="section featured">
         <div className="container section-head">
           <Reveal>
-            <p className="eyebrow">Inside the space</p>
-            <h2>Photography from real celebrations.</h2>
+            <p className="eyebrow">Inside the venue</p>
+            <h2>Style the venue your way.</h2>
             <p className="lede">
-              The room is only the beginning. These are a few of the ways guests
-              have filled it — and how it looks when the styling is in place.
+              Beautiful, flexible and ready for your color story.
             </p>
           </Reveal>
         </div>

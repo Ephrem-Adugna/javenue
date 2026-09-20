@@ -708,8 +708,19 @@ h2 + .lede:has(.brand-name.is-inline) {
   background: var(--paper-deep);
 }
 
+.why .eyebrow {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.75rem;
+}
+
 .why-title {
   margin-bottom: 0;
+  padding-top: 0.45em;
+}
+
+.why-title .brand-name {
+  padding-top: 0.2em;
 }
 
 .why-title .brand-script,
@@ -1042,6 +1053,22 @@ h2 + .lede:has(.brand-name.is-inline) {
 
 .footer-brand p {
   margin-top: 0.7rem;
+}
+
+.footer-logo {
+  display: block;
+  width: min(10.5rem, 72%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .footer-tag {

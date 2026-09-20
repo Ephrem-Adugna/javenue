@@ -78,7 +78,7 @@ const jsonLd = {
     postalCode: site.address.zip,
     addressCountry: "US",
   },
-  sameAs: [site.instagram.url],
+  sameAs: [site.instagram.url, site.facebook.url],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

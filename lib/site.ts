@@ -19,7 +19,10 @@ export const site = {
     handle: "@j.a.venue_joiousaffairs",
     url: "https://www.instagram.com/j.a.venue_joiousaffairs/",
   },
-  facebookLabel: "J.A. Venue",
+  facebook: {
+    label: "Joious Affairs",
+    url: "https://www.facebook.com/people/Joious-Affairs/100054774548949/",
+  },
   hours: "8:00 AM – 12:00 AM",
   ownership: ["Family Owned", "Women Owned", "Black Owned"],
   services: [

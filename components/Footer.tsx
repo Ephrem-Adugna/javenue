@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
+import { asset } from "@/lib/paths";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -9,10 +9,9 @@ export function Footer() {
         <div className="container contact-band-inner">
           <div>
             <p className="eyebrow">Inquire</p>
-            <h2>Let’s talk about your next gathering.</h2>
+            <h2>Let’s talk about your next event.</h2>
             <p className="lede">
-              Call, email, or send a note on Instagram. We’ll help you see if the
-              space is the right fit.
+              Call or text to inquire about pricing and available dates.
             </p>
           </div>
           <div className="contact-details">
@@ -25,7 +24,7 @@ export function Footer() {
               {site.email}
             </a>
             <p className="contact-line">
-              <span>Visit</span>
+              <span>Address</span>
               {site.address.line}
             </p>
             <a
@@ -37,13 +36,24 @@ export function Footer() {
               <span>Instagram</span>
               {site.instagram.handle}
             </a>
+            <a
+              className="contact-line"
+              href={site.facebook.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Facebook</span>
+              {site.facebook.label}
+            </a>
           </div>
         </div>
       </section>
       <footer className="site-footer">
         <div className="container footer-grid">
           <div className="footer-brand">
-            <Logo href="/" />
+            <Link href="/" className="footer-logo" aria-label="J.A. Venue home">
+              <img src={asset("/images/logo.png")} alt="J.A. Venue" />
+            </Link>
             <p className="footer-tag">{site.tagline}</p>
           </div>
           <div>
@@ -69,7 +79,9 @@ export function Footer() {
             <a href={site.instagram.url} target="_blank" rel="noreferrer">
               Instagram
             </a>
-            <p>Facebook: {site.facebookLabel}</p>
+            <a href={site.facebook.url} target="_blank" rel="noreferrer">
+              Facebook
+            </a>
           </div>
         </div>
         <div className="container footer-bottom">
