@@ -100,11 +100,11 @@ export const galleryImages: GalleryImage[] = [
     span: "tall",
   },
   {
-    src: "/images/saloon.jpg",
-    alt: "The J.A. Venue storefront styled with a saloon entrance and cacti",
-    width: 576,
-    height: 1024,
-    category: "venue",
+    src: "/images/oh-baby.jpg",
+    alt: "Yellow arch, balloon garland, and Oh Baby neon on a hedge wall with sunflowers",
+    width: 460,
+    height: 684,
+    category: "celebrations",
     span: "tall",
   },
   {
