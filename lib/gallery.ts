@@ -131,6 +131,14 @@ export const galleryImages: GalleryImage[] = [
     category: "venue",
     span: "wide",
   },
+  {
+    src: "/images/lounge.jpg",
+    alt: "Black lounge sofa, ottomans, and marble floors in the venue seating area",
+    width: 471,
+    height: 1024,
+    category: "venue",
+    span: "tall",
+  },
 ];
 
 export const featuredHomeImages = [

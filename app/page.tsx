@@ -30,8 +30,8 @@ export default function HomePage() {
     <main id="main">
       <section className="hero" aria-label="J.A. Venue">
         <img
-          src={asset("/images/navy-tables.jpg")}
-          alt="Round tables with navy linens, gold Chiavari chairs, and a balloon arch in the venue"
+          src={asset("/images/storefront.jpg")}
+          alt="The black storefront of J.A. Venue with the J.A. sign, Celebrations, and Collaborations"
         />
         <div className="hero-copy">
           <h1 className="sr-only">J.A. Venue</h1>
