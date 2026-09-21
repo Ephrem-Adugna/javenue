@@ -418,7 +418,7 @@ h2 + .lede:has(.brand-name.is-inline) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 42%;
 }
 
 .hero::after {
@@ -651,44 +651,17 @@ h2 + .lede:has(.brand-name.is-inline) {
   margin-bottom: 1.75rem;
 }
 
-.extras-grid {
-  display: grid;
-  gap: 0.85rem;
+.extras-flyer {
+  margin: 0 auto;
+  width: min(28rem, 100%);
+  background: #fff;
+  padding: 0.35rem;
 }
 
-.extras-card {
-  background: var(--ivory);
-  color: var(--ink);
-  padding: 1.25rem 1.2rem 1.1rem;
-}
-
-.extras-card h4 {
-  font-family: var(--font-script);
-  font-size: 1.7rem;
-  color: var(--lilac-deep);
-  margin-bottom: 0.75rem;
-}
-
-.extras-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.45rem;
-}
-
-.extras-card li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  border-bottom: 1px solid rgba(26, 21, 17, 0.1);
-  padding-bottom: 0.4rem;
-  font-size: 0.95rem;
-}
-
-.extras-card li span:last-child {
-  color: var(--ink-soft);
-  flex: none;
+.extras-flyer img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .featured {
@@ -1284,8 +1257,7 @@ h2 + .lede:has(.brand-name.is-inline) {
     columns: 2;
   }
 
-  .rates-venue,
-  .extras-grid {
+  .rates-venue {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1350,10 +1322,6 @@ h2 + .lede:has(.brand-name.is-inline) {
 
   .intro-room {
     min-height: 28rem;
-  }
-
-  .extras-grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .why-grid,

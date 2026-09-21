@@ -2,7 +2,7 @@ import { BrandName } from "@/components/BrandName";
 import { ButtonLink } from "@/components/ButtonLink";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { Reveal } from "@/components/Reveal";
-import { extraGroups, venueRental } from "@/lib/pricing";
+import { venueRental } from "@/lib/pricing";
 import { asset } from "@/lib/paths";
 import { featuredHomeImages } from "@/lib/gallery";
 import { site } from "@/lib/site";
@@ -30,8 +30,8 @@ export default function HomePage() {
     <main id="main">
       <section className="hero" aria-label="J.A. Venue">
         <img
-          src={asset("/images/storefront.jpg")}
-          alt="The black storefront of J.A. Venue with white curtains and the painted J.A. venue sign"
+          src={asset("/images/navy-tables.jpg")}
+          alt="Round tables with navy linens, gold Chiavari chairs, and a balloon arch in the venue"
         />
         <div className="hero-copy">
           <h1 className="sr-only">J.A. Venue</h1>
@@ -132,21 +132,12 @@ export default function HomePage() {
               personalized centerpieces, themed decorations and so much more!
             </p>
           </Reveal>
-          <div className="extras-grid">
-            {extraGroups.map((group) => (
-              <article key={group.title} className="extras-card">
-                <h4>{group.title}</h4>
-                <ul>
-                  {group.items.map((item) => (
-                    <li key={item.name}>
-                      <span>{item.name}</span>
-                      <span>{item.price ?? "Inquire"}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+          <figure className="extras-flyer">
+            <img
+              src={asset("/images/addons-flyer.jpg")}
+              alt="Add-on price list for tables, chairs, tableware, backdrops, additional items, and tents. Some items are priced as starting amounts or TBD."
+            />
+          </figure>
         </div>
       </section>
 
