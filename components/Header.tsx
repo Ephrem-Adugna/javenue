@@ -13,7 +13,7 @@ function NavLinks({
   items,
   pathname,
 }: {
-  items: typeof nav;
+  items: readonly (typeof nav)[number][];
   pathname: string;
 }) {
   const current = pathname.replace(/\/$/, "") || "/";
