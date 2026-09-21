@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { asset } from "@/lib/paths";
+import { BrandName } from "./BrandName";
 
 export function Logo({ href = "/" }: { href?: string; compact?: boolean }) {
-  const inner = <img src={asset("/images/logo.png")} alt="" />;
+  const inner = <BrandName />;
 
   if (!href) {
     return inner;
   }
 
   return (
-    <Link href={href} className="header-logo" aria-label="J.A. Venue home">
+    <Link href={href} className="brand" aria-label="J.A. Venue home">
       {inner}
     </Link>
   );
