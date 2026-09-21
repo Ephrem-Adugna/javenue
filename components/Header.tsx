@@ -6,6 +6,33 @@ import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { nav } from "@/lib/site";
 
+const leftNav = nav.slice(0, 2);
+const rightNav = nav.slice(2);
+
+function NavLinks({
+  items,
+  pathname,
+}: {
+  items: typeof nav;
+  pathname: string;
+}) {
+  const current = pathname.replace(/\/$/, "") || "/";
+
+  return items.map((item) => {
+    const active = !item.href.includes("#") && current === item.href;
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        className={active ? "is-active" : undefined}
+        aria-current={active ? "page" : undefined}
+      >
+        {item.label}
+      </Link>
+    );
+  });
+}
+
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -35,23 +62,12 @@ export function Header() {
         Skip to content
       </a>
       <div className="header-inner">
+        <nav className="nav-desktop nav-left" aria-label="Primary">
+          <NavLinks items={leftNav} pathname={pathname} />
+        </nav>
         <Logo />
-        <nav className="nav-desktop" aria-label="Primary">
-          {nav.map((item) => {
-            const current = pathname.replace(/\/$/, "") || "/";
-            const active =
-              !item.href.includes("#") && current === item.href;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={active ? "is-active" : undefined}
-                aria-current={active ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+        <nav className="nav-desktop nav-right" aria-label="More">
+          <NavLinks items={rightNav} pathname={pathname} />
         </nav>
         <button
           type="button"
