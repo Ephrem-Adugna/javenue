@@ -25,7 +25,6 @@ export const venueRental = {
     "40% deposit to book your date",
     "$250 refundable damage fee",
     "Occupancy max 100 people",
-    "Tented patio available",
   ],
   special:
     "Special pricing for meetings, non-profit, community, and vendor events.",

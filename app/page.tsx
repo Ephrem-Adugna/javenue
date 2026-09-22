@@ -189,8 +189,8 @@ export default function HomePage() {
 
       <section className="finale">
         <img
-          src={asset("/images/wedding.jpg")}
-          alt="Outdoor wedding cocktail hour with gold chairs, white linens, orchids, and draped fabric"
+          src={asset("/images/gold-sash-tables.jpg")}
+          alt="Round tables with white linens, gold chair sashes, navy napkins, and floral centerpieces"
         />
         <div className="finale-inner">
           <p className="eyebrow">Your occasion</p>

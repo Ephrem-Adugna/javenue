@@ -52,7 +52,7 @@ export function Footer() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <Link href="/" className="footer-logo" aria-label="J.A. Venue home">
-              <img src={asset("/images/logo.png")} alt="J.A. Venue" />
+              <img src={asset("/images/wordmark.png")} alt="J.A. Venue" />
             </Link>
             <p className="footer-tag">{site.tagline}</p>
           </div>
