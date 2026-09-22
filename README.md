@@ -13,6 +13,6 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## GitHub Pages
 
-The site is a static Next.js export, deployed from `main` to [https://ephrem-adugna.github.io/javenue/](https://ephrem-adugna.github.io/javenue/).
+The site is a static Next.js export, deployed from `main` to [https://javenuela.com](https://javenuela.com).
 
 In the GitHub repo, set **Settings → Pages → Source** to **GitHub Actions**.

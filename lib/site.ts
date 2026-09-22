@@ -4,7 +4,7 @@ export const site = {
   tagline: "A beautiful setting for life’s most memorable celebrations.",
   description:
     "A beautiful setting for life’s most memorable celebrations. J.A. Venue is an event space in Los Angeles for weddings, showers, birthdays, and gatherings of every kind.",
-  url: "https://ephrem-adugna.github.io/javenue",
+  url: "https://javenuela.com",
   address: {
     street: "2070 W. Manchester Ave.",
     city: "Los Angeles",
